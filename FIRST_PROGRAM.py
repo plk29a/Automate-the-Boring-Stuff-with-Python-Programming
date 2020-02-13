@@ -16,7 +16,7 @@ while True:
     print(Name + ', how old are you?') #pyta o wiek
     Wiek = input() #podajesz wiek
 
-    try:
+    try: 
         int(Wiek)
         if int(Wiek) <= 99 and int(Wiek) > 0: #sprawdza czy jest to liczba od 0 do 99 i przerywa pętle
             break
@@ -24,7 +24,7 @@ while True:
             print('Are you sure?') #podaje komunikat jeśli jest poza przedziałem
     except ValueError:    
         print('it is not a number.') 
-#Sprawdzenie czy wiek jest liczbą z przedziału 0-99
+
 
 print('You born in ' + str(2020 - int(Wiek))) #podaje datę urodzenia
 
