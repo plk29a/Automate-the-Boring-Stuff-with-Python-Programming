@@ -1,32 +1,23 @@
- #funkcja input(), str(), int()
+# funkcja input(), str(), int()
 
-print('Hi, \nwhat is your nickname?') #Pyta o imie.
-Name = input()
+name = input('Hi, \nwhat is your nickname?')
+name = name.title()
 
-
-Name = Name.title()
-if Name: #pusty string ma wartość falsey.
-    print('Nice to meet you, ', Name)
+if name: #value of empty string is False
+    print('Nice to meet you,', name)
 else:
     print('Noname is no name :(')
 
-
-
 while True:
-    print(Name + ', how old are you?') #pyta o wiek
-    Wiek = input() #podajesz wiek
+    age = input('{}, how old are you?'.format(name)) 
 
     try:
-        int(Wiek)
-        if int(Wiek) <= 99 and int(Wiek) > 0: #sprawdza czy jest to liczba od 0 do 99 i przerywa pętle
+        int(age)
+        if int(age) > 0 and int(age) <= 99:
             break
         else:
-            print('Are you sure?') #podaje komunikat jeśli jest poza przedziałem
+            print('Are you sure?')
     except ValueError:    
-        print('it is not a number.') 
-#Sprawdzenie czy wiek jest liczbą z przedziału 0-99
+        print('It is not a number.') 
 
-print('You born in ' + str(2020 - int(Wiek))) #podaje datę urodzenia
-
-
-
+print('You are born in ' + str(2020 - int(age)))
