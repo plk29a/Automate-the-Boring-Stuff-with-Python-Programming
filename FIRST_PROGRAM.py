@@ -20,5 +20,6 @@ while True:
     except ValueError:    
         print('It is not a number.')
 
+
 print('You are born in ' + str(2020 - int(age)))
 input('<press enter to exit>')
