@@ -23,4 +23,3 @@ while True:
 
 print('You are born in ' + str(2020 - int(age)))
 input('<press enter to exit>')
->>>>>>> 62bed099c59bba4f58cd4a46e331fe061e52495b
